@@ -1,0 +1,71 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.drag-n-drop {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 0.5rem;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+}
+
+.dnd-group {
+  padding: 0.5rem;
+  background-color: #49505e;
+  border-radius: 5px;
+}
+
+.group-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.dnd-item {
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #282c34;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: grab;
+}
+
+.dnd-item:active,
+.current:active {
+  cursor: grabbing;
+}
+
+.current {
+  background-color: #282c34;
+  cursor: grabbing;
+}
+
+.dnd-item:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.dnd-item * {
+  margin: 0;
+  font-size: 1.25rem;
+}
